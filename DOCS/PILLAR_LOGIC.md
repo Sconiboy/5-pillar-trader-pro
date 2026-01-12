@@ -1,27 +1,18 @@
-# Ross Cameron 5-Pillar Grading Logic
+# 5-Pillar Master Logic & Technical Edge
 
-This document defines the algorithmic weights for the stock grading system.
+## 1. The 5 Pillars (Core)
+- Catalyst, Float, Daily Chart, RVOL, Risk/Reward.
 
-## Grading Thresholds
-### Grade A (The Perfect Setup)
-- **Catalyst:** Strong/Active (Earnings, FDA, Breaking News).
-- **Float:** < 10M shares.
-- **Daily Chart:** Clean, no resistance for 20%+.
-- **RVOL (Relative Volume):** > 3.0.
-- **Risk/Reward:** > 3:1.
+## 2. The Options Cushion (Safety)
+- **isOptionable:** Boolean. If True, display Blue 'OPT' badge.
+- **Why:** Options provide a safety cushion for slower execution.
 
-### Grade B (Strong Trade)
-- **Catalyst:** Moderate (Sector momentum, Sympathy play).
-- **Float:** 10M - 50M shares.
-- **Daily Chart:** Some minor resistance levels nearby.
-- **RVOL:** 1.5 - 3.0.
-- **Risk/Reward:** 2:1.
+## 3. The Bag Holder (BH) Score (History)
+- **Logic:** Count of 20%+ moves in last 90 days.
+- **Score 90+:** Serial Runner (Safe to hold/average).
+- **Score < 20:** One-off fluke (Cut losses fast).
 
-### Grade C/D (Low Probability)
-- **Catalyst:** None or Weak.
-- **Float:** > 50M (High float).
-- **RVOL:** < 1.0.
-- **Risk/Reward:** < 1:1.
-
-## Calculation Logic
-The overall grade is the average of these 5 pillars. If "Float" is > 100M, the maximum possible grade is "C" regardless of other pillars.
+## 4. The Technical Edge (Entry Confirmation)
+- **VWAP:** Price must be above VWAP for a Long entry.
+- **Blue Sky (ATH):** If at All-Time High, zero overhead resistance.
+- **Setups:** Identify "ABCD", "Bull Flag", or "Flat Top Breakout".
